@@ -1,0 +1,24 @@
+
+        <div class="container">
+            <div class="page-header">
+                <h1>Choose your Car</h1>
+                    Learn about the Cars
+        </div>
+            <div ng-controller="listCtrl as list">
+                    <div class="row">
+                        <div class="col-sm-6" ng-repeat="car in list.data">
+                            <a href="cars/{{car.id}}"><div class="well well-sm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img ng-src="{{car.url}}" class="img-rounded img-responsive">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><strong>Car ID :</strong>{{car.albumId}}</h4>
+                                        <h4><strong>Title : </strong>{{car.title}}</h4>
+                                    </div>
+                                </div>
+                            </div></a>
+                        </div>
+                    </div>
+            </div>   
+        </div>

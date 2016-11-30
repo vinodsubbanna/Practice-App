@@ -1,0 +1,44 @@
+<html ng-app="carmodule">
+    <head>
+        <title>Quiz App</title>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" src="css/style.css">
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Choose your Car</h1>
+                Learn about the Cars
+            </div>
+            <div ng-controller="listCtrl as list">
+                    <div class="row">
+                        <div class="col-sm-6" ng-repeat="car in list.data">
+                            <div class="well well-sm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img ng-src="{{car.url}}" class="img-rounded img-responsive">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><strong>Car ID :</strong>{{car.albumId}}</h4>
+                                        <h4><strong>Title : </strong>{{car.title}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+            
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller/list.js"></script>
+    <script src="js/services/dataservice.js"></script>
+    </body>
+    
+</html>
